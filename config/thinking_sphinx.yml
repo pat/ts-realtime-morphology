@@ -1,2 +1,3 @@
 development:
   morphology: libstemmer_es
+  min_infix_len: 1

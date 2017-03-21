@@ -21,8 +21,20 @@ namespace :morphology do
     end
 
     puts ""
+    puts "Searching for '*camera*'. Matching titles:"
+    Listing.search("camera", :star => true).each do |listing|
+      puts "* #{listing.title}"
+    end
+
+    puts ""
     puts "Searching for 'cameras'. Matching titles:"
     Listing.search("cameras").each do |listing|
+      puts "* #{listing.title}"
+    end
+
+    puts ""
+    puts "Searching for '*cameras*'. Matching titles:"
+    Listing.search("cameras", :star => true).each do |listing|
       puts "* #{listing.title}"
     end
 
